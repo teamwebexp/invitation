@@ -1,0 +1,8 @@
+{
+  "name": "Mahima & Harsh Wedding Invitation",
+  "description": "Luxury Indian digital wedding invitation with animated envelope reveal, scratch date card, and celebration itinerary for Mahima Arora & Harsh Bajaj.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-cinzel: 'Cinzel', serif;
+    --font-cursive: 'Great Vibes', cursive;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #2D241E;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-heading {
+    font-family: var(--font-serif);
+  }
+
+  .font-cinzel {
+    font-family: var(--font-cinzel);
+  }
+
+  .font-cursive {
+    font-family: var(--font-cursive);
+  }
+}
+
+/* Custom Luxury Gradients & Shimmers */
+.gold-foil-text {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-foil-bg {
+  background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 35%, #AA771C 70%, #E6CA65 100%);
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #D4AF37, #F3E5AB, #AA771C, #E6CA65) 1;
+}
+
+.burgundy-velvet {
+  background: radial-gradient(circle at center, #721B29 0%, #4A0E17 100%);
+}
+
+/* Subtle Indian Royal Jacquard/Damask paper backdrop */
+.royal-paper-pattern {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#D4AF37 0.75px, transparent 0.75px), radial-gradient(#721B29 0.75px, #FAF7F2 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-opacity: 0.04;
+}
+
+/* Smooth customized gold scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFEA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B38728;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes pulseGold {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.7);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulseGold 2.5s infinite;
+}
